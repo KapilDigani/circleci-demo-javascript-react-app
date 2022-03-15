@@ -43,6 +43,7 @@ workflows:
       #     filters:
       #       branches:
       #         only: master # only deploy when on main/master
+      # Adding a comment to check the commit / trigger process [Kapil Digani]
   nightly:
     triggers:
       - schedule:
