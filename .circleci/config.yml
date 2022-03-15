@@ -43,7 +43,8 @@ workflows:
       #     filters:
       #       branches:
       #         only: master # only deploy when on main/master
-      # Adding a comment to check the commit / trigger process [Kapil Digani]
+      # Adding a comment directly to GIT to check the commit / trigger process [Kapil Digani]
+      # Now adding a comment via CircleCI editor [Kapil Digani]
   nightly:
     triggers:
       - schedule:
