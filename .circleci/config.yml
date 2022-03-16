@@ -45,6 +45,7 @@ workflows:
       #         only: master # only deploy when on main/master
       # Adding a comment directly to GIT to check the commit / trigger process [Kapil Digani]
       # Now adding a comment via CircleCI editor [Kapil Digani]
+      # Let's create some conflict and see what happens [Kapil Digani]
   nightly:
     triggers:
       - schedule:
