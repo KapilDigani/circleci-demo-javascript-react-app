@@ -1,0 +1,28 @@
+template:
+  name: CD Deploy Pipeline Template
+  type: Pipeline
+  projectIdentifier: Rohan
+  orgIdentifier: default
+  spec:
+    stages:
+      - stage:
+          name: Deploy to Staging
+          identifier: Deploy_to_Staging
+          template:
+            templateRef: Stage_CD_Deploy
+            versionLabel: 0.0.1
+            templateInputs:
+              type: Deployment
+              spec:
+                service:
+                  serviceInputs:
+                    serviceDefinition:
+                      type: Kubernetes
+                      spec:
+                        artifacts:
+                          primary:
+                            type: DockerRegistry
+                            spec:
+                              tag: <+input>
+  identifier: CD_Deploy_Pipeline_Template
+  versionLabel: "2.0"
